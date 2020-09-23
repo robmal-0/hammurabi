@@ -1,4 +1,11 @@
-.game {
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	filter: sepia(0.1) brightness(0.9) contrast(1.1) saturate(0.9);
+}
+
+.grid {
 	display: grid;
 	grid-template-columns: 200px auto;
 	grid-template-rows: 60px auto 20px;
@@ -9,26 +16,52 @@
 	height: 100%;
 }
 
-.tab {
-	display: none;
-}
-
-body {
-	margin: 0;
-	height: 100vh;
-}
-
 header {
 	grid-area: header;
-	border-bottom: 1px solid grey;
+	border-bottom: 1px solid dimgray;
 	box-sizing: border-box;
+	padding-left: 10px;
+	background: lightslategray;
+	color: dimgray;
+}
+
+header h1 {
+	margin: 10px 0 0 0;
+	filter: brightness(0.5);
+}
+
+menu {
+	grid-area: menu;
+	padding: 0;
+	background: lightgrey;
+	margin: 0;
+	border-right: 1px solid dimgray;
+}
+
+menu p {
+	margin: 0;
+	padding: 10px;
+	color: dimgrey;
+}
+
+menu p:hover {
+	cursor: pointer;
+	background: #0002;
+}
+
+.tab {
+	display: none;
+	padding: 10px;
+	overflow: auto;
+	filter: brightness(0.9);
 }
 
 footer {
 	grid-area: footer;
 	height: 20px;
 	box-sizing: border-box;
-	border-top: 1px solid gray;
+	border-top: 1px solid dimgrey;
+	background: lightslategray;
 	display: grid;
 	grid-template-columns: auto auto;
 }
@@ -37,26 +70,7 @@ footer p {
 	margin: 0;
 }
 
-header h1 {
-	margin: 10px 0 0 0;
-}
-
-menu {
-	grid-area: menu;
-	padding: 0;
-	background: #909090;
-	margin: 0;
-}
-
-menu p {
-	margin: 0;
-	padding: 10px;
-}
-
-menu p:hover {
-	cursor: pointer;
-	background: #fff5;
-}
+/* Given stilmall */
 
 #people {
 	display: block;
@@ -80,10 +94,6 @@ menu p:hover {
 
 #economy li {
 	margin-bottom: 1px;
-}
-
-.fieldset {
-	border-style: none;
 }
 
 button {

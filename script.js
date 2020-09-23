@@ -4,4 +4,8 @@ $(() => {
 		$("div.tab").css("display", "");
 		$(`div.tab[data-tab="${$(this).text()}"]`).css("display", "initial");
 	});
+	$("input[type='range']").on("dblclick", function () {
+		this.value = 0;
+		$(this).trigger("change");
+	});
 });

@@ -14,7 +14,7 @@
 	</head>
 
 	<body onload="gameStart();">
-		<div class="game">
+		<div class="grid">
 			<header>
 				<h1>Den store Hammurabi!</h1>
 			</header>
@@ -22,7 +22,7 @@
 				<p>Spela</p>
 				<p>Wiki</p>
 			</menu>
-			<div class="tab" data-tab="Spela">
+			<div class="tab game" data-tab="Spela">
 				<h2 id="year">The report for year: 1</h2>
 				<ul id="people">
 					<li id="starved">Starved: 0</li>
@@ -37,7 +37,7 @@
 					<li id="price">Price: 17</li>
 				</ul>
 				<form>
-					<fieldset class="fieldset">
+					<fieldset>
 						<legend>
 							Acres to sell / buy
 							<span id="outputAcrestosellbuy">164</span>
@@ -46,12 +46,16 @@
 							type="button"
 							value="-"
 							id="minusbuttonAcrestosellbuy"
-							onclick="onChangeAcres('minusbuttonAcrestosellbuy');"
+							onclick="onChangeAcres(
+								'minusbuttonAcrestosellbuy'
+							);"
 						/>
 						<input
 							type="range"
 							id="sliderAcrestosellbuy"
-							onchange="onChangeAcres('sliderAcrestosellbuy');"
+							onchange="onChangeAcres(
+								'sliderAcrestosellbuy'
+							);"
 							min="-1000"
 							max="164"
 							step="1"
@@ -60,23 +64,27 @@
 							type="button"
 							value="+"
 							id="plusbuttonAcrestosellbuy"
-							onclick="onChangeAcres('plusbuttonAcrestosellbuy');"
+							onclick="onChangeAcres(
+								'plusbuttonAcrestosellbuy'
+							);"
 						/>
 					</fieldset>
-					<fieldset class="fieldset">
-						<legend>
-							Feed people <span id="outputFeedpeople">0</span>
-						</legend>
+					<fieldset>
+						<legend>Feed people <span id="outputFeedpeople">0</span></legend>
 						<input
 							type="button"
 							value="-"
 							id="minusbuttonFeedpeople"
-							onclick="onChangeFeeding('minusbuttonFeedpeople');"
+							onclick="onChangeFeeding(
+								'minusbuttonFeedpeople'
+							);"
 						/>
 						<input
 							type="range"
 							id="sliderFeedpeople"
-							onchange="onChangeFeeding('sliderFeedpeople');"
+							onchange="onChangeFeeding(
+								'sliderFeedpeople'
+							);"
 							min="0"
 							max="12"
 							step="1"
@@ -85,10 +93,12 @@
 							type="button"
 							value="+"
 							id="plusbuttonFeedpeople"
-							onclick="onChangeFeeding('plusbuttonFeedpeople');"
+							onclick="onChangeFeeding(
+								'plusbuttonFeedpeople'
+							);"
 						/>
 					</fieldset>
-					<fieldset class="fieldset">
+					<fieldset>
 						<legend>
 							Plant with seed
 							<span id="outputPlantwithseed">0</span>
@@ -97,12 +107,16 @@
 							type="button"
 							value="-"
 							id="minusbuttonPlantwithseed"
-							onclick="onChangePlanting('minusbuttonPlantwithseed');"
+							onclick="onChangePlanting(
+								'minusbuttonPlantwithseed'
+							);"
 						/>
 						<input
 							type="range"
 							id="sliderPlantwithseed"
-							onchange="onChangePlanting('sliderPlantwithseed');"
+							onchange="onChangePlanting(
+								'sliderPlantwithseed'
+							);"
 							min="0"
 							max="12"
 							step="1"
@@ -111,19 +125,18 @@
 							type="button"
 							value="+"
 							id="plusbuttonPlantwithseed"
-							onclick="onChangePlanting('plusbuttonPlantwithseed');"
+							onclick="onChangePlanting(
+								'plusbuttonPlantwithseed'
+							);"
 						/>
 					</fieldset>
-					<button type="button" onclick="gameStart();">
-						Restart
-					</button>
-					<button type="button" onclick="finishTurn();">
-						So be it!
-					</button>
-					<button type="button">Help</button>
+					<button type="button" onclick="gameStart();">Restart</button>
+					<button type="button" onclick="finishTurn();">So be it!</button>
 				</form>
 			</div>
-			<div class="tab" data-tab="Wiki"></div>
+			<div class="tab" data-tab="Wiki">
+				<h2>Game rules</h2>
+			</div>
 			<footer>
 				<p>Gjord av: Robin Malmström</p>
 				<p>Email: robmal-0@student.ltu.se</p>
