@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)http://www.sm.luth.se/csee/courses/d0015e/f-webben/hammurabi.html -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,103 +6,128 @@
 		<title>Hammurabi</title>
 		<link rel="stylesheet" type="text/css" href="./style.css" />
 		<script type="text/javascript" src="./hammurabi.js"></script>
+		<script
+			type="text/javascript"
+			src="https://code.jquery.com/jquery-latest.min.js"
+		></script>
+		<script type="text/javascript" src="./script.js"></script>
 	</head>
 
 	<body onload="gameStart();">
-		<h1>O Great Hammurabi!</h1>
-		<h2 id="year">The report for year: 1</h2>
-		<ul id="people">
-			<li id="starved">Starved: 0</li>
-			<li id="newcomers">Newcomers: 5</li>
-			<li id="population">Population: 100</li>
-		</ul>
-		<ul id="economy">
-			<li id="acres">Acres: 1000</li>
-			<li id="bushels">Bushels: 2800</li>
-			<li id="harvest">Harvest: 3</li>
-			<li id="rats">Rats: 200</li>
-			<li id="price">Price: 17</li>
-		</ul>
-		<form>
-			<fieldset class="fieldset">
-				<legend>
-					Acres to sell / buy
-					<span id="outputAcrestosellbuy">164</span>
-				</legend>
-				<input
-					type="button"
-					value="-"
-					id="minusbuttonAcrestosellbuy"
-					onclick="onChangeAcres('minusbuttonAcrestosellbuy');"
-				/>
-				<input
-					type="range"
-					id="sliderAcrestosellbuy"
-					onchange="onChangeAcres('sliderAcrestosellbuy');"
-					min="-1000"
-					max="164"
-					step="1"
-				/>
-				<input
-					type="button"
-					value="+"
-					id="plusbuttonAcrestosellbuy"
-					onclick="onChangeAcres('plusbuttonAcrestosellbuy');"
-				/>
-			</fieldset>
-			<fieldset class="fieldset">
-				<legend>
-					Feed people <span id="outputFeedpeople">0</span>
-				</legend>
-				<input
-					type="button"
-					value="-"
-					id="minusbuttonFeedpeople"
-					onclick="onChangeFeeding('minusbuttonFeedpeople');"
-				/>
-				<input
-					type="range"
-					id="sliderFeedpeople"
-					onchange="onChangeFeeding('sliderFeedpeople');"
-					min="0"
-					max="12"
-					step="1"
-				/>
-				<input
-					type="button"
-					value="+"
-					id="plusbuttonFeedpeople"
-					onclick="onChangeFeeding('plusbuttonFeedpeople');"
-				/>
-			</fieldset>
-			<fieldset class="fieldset">
-				<legend>
-					Plant with seed <span id="outputPlantwithseed">0</span>
-				</legend>
-				<input
-					type="button"
-					value="-"
-					id="minusbuttonPlantwithseed"
-					onclick="onChangePlanting('minusbuttonPlantwithseed');"
-				/>
-				<input
-					type="range"
-					id="sliderPlantwithseed"
-					onchange="onChangePlanting('sliderPlantwithseed');"
-					min="0"
-					max="12"
-					step="1"
-				/>
-				<input
-					type="button"
-					value="+"
-					id="plusbuttonPlantwithseed"
-					onclick="onChangePlanting('plusbuttonPlantwithseed');"
-				/>
-			</fieldset>
-			<button type="button" onclick="gameStart();">Restart</button>
-			<button type="button" onclick="finishTurn();">So be it!</button>
-			<button type="button">Help</button>
-		</form>
+		<div class="game">
+			<header>
+				<h1>Den store Hammurabi!</h1>
+			</header>
+			<menu>
+				<p>Spela</p>
+				<p>Wiki</p>
+			</menu>
+			<div class="tab" data-tab="Spela">
+				<h2 id="year">The report for year: 1</h2>
+				<ul id="people">
+					<li id="starved">Starved: 0</li>
+					<li id="newcomers">Newcomers: 5</li>
+					<li id="population">Population: 100</li>
+				</ul>
+				<ul id="economy">
+					<li id="acres">Acres: 1000</li>
+					<li id="bushels">Bushels: 2800</li>
+					<li id="harvest">Harvest: 3</li>
+					<li id="rats">Rats: 200</li>
+					<li id="price">Price: 17</li>
+				</ul>
+				<form>
+					<fieldset class="fieldset">
+						<legend>
+							Acres to sell / buy
+							<span id="outputAcrestosellbuy">164</span>
+						</legend>
+						<input
+							type="button"
+							value="-"
+							id="minusbuttonAcrestosellbuy"
+							onclick="onChangeAcres('minusbuttonAcrestosellbuy');"
+						/>
+						<input
+							type="range"
+							id="sliderAcrestosellbuy"
+							onchange="onChangeAcres('sliderAcrestosellbuy');"
+							min="-1000"
+							max="164"
+							step="1"
+						/>
+						<input
+							type="button"
+							value="+"
+							id="plusbuttonAcrestosellbuy"
+							onclick="onChangeAcres('plusbuttonAcrestosellbuy');"
+						/>
+					</fieldset>
+					<fieldset class="fieldset">
+						<legend>
+							Feed people <span id="outputFeedpeople">0</span>
+						</legend>
+						<input
+							type="button"
+							value="-"
+							id="minusbuttonFeedpeople"
+							onclick="onChangeFeeding('minusbuttonFeedpeople');"
+						/>
+						<input
+							type="range"
+							id="sliderFeedpeople"
+							onchange="onChangeFeeding('sliderFeedpeople');"
+							min="0"
+							max="12"
+							step="1"
+						/>
+						<input
+							type="button"
+							value="+"
+							id="plusbuttonFeedpeople"
+							onclick="onChangeFeeding('plusbuttonFeedpeople');"
+						/>
+					</fieldset>
+					<fieldset class="fieldset">
+						<legend>
+							Plant with seed
+							<span id="outputPlantwithseed">0</span>
+						</legend>
+						<input
+							type="button"
+							value="-"
+							id="minusbuttonPlantwithseed"
+							onclick="onChangePlanting('minusbuttonPlantwithseed');"
+						/>
+						<input
+							type="range"
+							id="sliderPlantwithseed"
+							onchange="onChangePlanting('sliderPlantwithseed');"
+							min="0"
+							max="12"
+							step="1"
+						/>
+						<input
+							type="button"
+							value="+"
+							id="plusbuttonPlantwithseed"
+							onclick="onChangePlanting('plusbuttonPlantwithseed');"
+						/>
+					</fieldset>
+					<button type="button" onclick="gameStart();">
+						Restart
+					</button>
+					<button type="button" onclick="finishTurn();">
+						So be it!
+					</button>
+					<button type="button">Help</button>
+				</form>
+			</div>
+			<div class="tab" data-tab="Wiki"></div>
+			<footer>
+				<p>Gjord av: Robin Malmström</p>
+				<p>Email: robmal-0@student.ltu.se</p>
+			</footer>
+		</div>
 	</body>
 </html>

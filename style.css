@@ -1,3 +1,63 @@
+.game {
+	display: grid;
+	grid-template-columns: 200px auto;
+	grid-template-rows: 60px auto 20px;
+	grid-template-areas:
+		"header header"
+		"menu ."
+		"footer footer";
+	height: 100%;
+}
+
+.tab {
+	display: none;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+}
+
+header {
+	grid-area: header;
+	border-bottom: 1px solid grey;
+	box-sizing: border-box;
+}
+
+footer {
+	grid-area: footer;
+	height: 20px;
+	box-sizing: border-box;
+	border-top: 1px solid gray;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+footer p {
+	margin: 0;
+}
+
+header h1 {
+	margin: 10px 0 0 0;
+}
+
+menu {
+	grid-area: menu;
+	padding: 0;
+	background: #909090;
+	margin: 0;
+}
+
+menu p {
+	margin: 0;
+	padding: 10px;
+}
+
+menu p:hover {
+	cursor: pointer;
+	background: #fff5;
+}
+
 #people {
 	display: block;
 	padding-left: 0;
@@ -30,5 +90,3 @@ button {
 	margin: 30px 25px 0 0;
 	padding: 10px 15px;
 }
-
-
