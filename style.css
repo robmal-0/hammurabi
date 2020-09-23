@@ -1,3 +1,5 @@
+/* #region Layout*/
+
 body {
 	margin: 0;
 	height: 100vh;
@@ -16,6 +18,10 @@ body {
 	height: 100%;
 }
 
+/*#endregion*/
+
+/* #region Header */
+
 header {
 	grid-area: header;
 	border-bottom: 1px solid dimgray;
@@ -29,6 +35,10 @@ header h1 {
 	margin: 10px 0 0 0;
 	filter: brightness(0.5);
 }
+
+/* #endregion */
+
+/* #region Menu */
 
 menu {
 	grid-area: menu;
@@ -49,12 +59,28 @@ menu p:hover {
 	background: #0002;
 }
 
+/* #endregion */
+
+/* #region Sidinnehåll */
+
 .tab {
 	display: none;
 	padding: 10px;
 	overflow: auto;
 	filter: brightness(0.9);
 }
+
+h2 {
+	margin: 5px 0;
+}
+
+legend span:focus {
+	padding: 0 5px;
+}
+
+/* #endregion */
+
+/* #region Footer */
 
 footer {
 	grid-area: footer;
@@ -70,7 +96,9 @@ footer p {
 	margin: 0;
 }
 
-/* Given stilmall */
+/* #endregion */
+
+/* #region Default */
 
 #people {
 	display: block;
@@ -100,3 +128,5 @@ button {
 	margin: 30px 25px 0 0;
 	padding: 10px 15px;
 }
+
+/* #endregion */
