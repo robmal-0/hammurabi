@@ -78,6 +78,62 @@ legend span:focus {
 	padding: 0 5px;
 }
 
+fieldset {
+	width: fit-content;
+	border: none;
+	border-left: 3px solid greenyellow;
+	border-radius: 15px 0 0 5px;
+	margin-bottom: 10px;
+}
+
+input[type="range"] {
+	width: 400px;
+}
+
+.rapport {
+	display: grid;
+	grid-template-areas:
+		"head econ"
+		"peop econ";
+	width: fit-content;
+	margin-bottom: 10px;
+}
+
+.rapport h2 {
+	grid-area: head;
+	width: fit-content;
+	line-height: 36px;
+	margin: 4px 0;
+}
+
+.wrapper {
+	padding-left: 0;
+	width: fit-content;
+}
+
+.wrapper div {
+	display: grid;
+	grid-template-columns: 120px 100px;
+}
+
+.wrapper div p {
+	margin: 2px 0;
+}
+
+.wrapper div p:first-child {
+	border-left: 2px solid greenyellow;
+	padding-left: 3px;
+	border-radius: 2px;
+}
+
+#people {
+	grid-area: peop;
+}
+
+#economy {
+	grid-area: econ;
+}
+
 /* #endregion */
 
 /* #region Footer */
@@ -94,35 +150,12 @@ footer {
 
 footer p {
 	margin: 0;
+	padding-left: 10px;
 }
 
 /* #endregion */
 
 /* #region Default */
-
-#people {
-	display: block;
-	padding-left: 0;
-	border: black 1px solid;
-	list-style: none;
-}
-
-#people li {
-	display: inline;
-	margin-right: 10px;
-	border: black 1px solid;
-}
-
-#economy {
-	display: block;
-	padding-left: 0;
-	border: black 1px solid;
-	list-style: none;
-}
-
-#economy li {
-	margin-bottom: 1px;
-}
 
 button {
 	margin: 30px 25px 0 0;

@@ -20,22 +20,24 @@
 			</header>
 			<menu>
 				<p>Spela</p>
-				<p>Wiki</p>
+				<p>Hjälp och regler</p>
 			</menu>
 			<div class="tab game" data-tab="Spela">
-				<h2 id="year"></h2>
-				<ul id="people">
-					<li id="starved"></li>
-					<li id="newcomers"></li>
-					<li id="population"></li>
-				</ul>
-				<ul id="economy">
-					<li id="acres"></li>
-					<li id="bushels"></li>
-					<li id="harvest"></li>
-					<li id="rats"></li>
-					<li id="price"></li>
-				</ul>
+				<div class="rapport">
+					<h2 id="year"></h2>
+					<div id="people" class="wrapper">
+						<div id="starved"></div>
+						<div id="newcomers"></div>
+						<div id="population"></div>
+					</div>
+					<div id="economy" class="wrapper">
+						<div id="acres"></div>
+						<div id="bushels"></div>
+						<div id="harvest"></div>
+						<div id="rats"></div>
+						<div id="price"></div>
+					</div>
+				</div>
 				<form>
 					<fieldset>
 						<legend>
@@ -134,8 +136,13 @@
 					<button type="button" onclick="finishTurn();">Klar!</button>
 				</form>
 			</div>
-			<div class="tab" data-tab="Wiki">
-				<h2>Spel regler</h2>
+			<div class="tab" data-tab="Hjälp och regler">
+				<h2>Bakgrund</h2>
+				<p>
+					Du är Hammurabi, kung över Babylon och du måste se till att ditt rike
+					överlever!
+				</p>
+				<p>Spelet är baserat på världens första textbaserade strategispel.</p>
 			</div>
 			<footer>
 				<p>Gjord av: Robin Malmström</p>

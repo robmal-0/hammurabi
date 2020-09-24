@@ -1,13 +1,13 @@
 function writeGameState() {
 	$("#year").html(`Rapport för år: ${gameState.year}`);
-	$("#starved").html(`Döda i svält: ${gameState.starved}`);
-	$("#newcomers").html(`Nykommande: ${gameState.newcomers}`);
-	$("#population").html(`Befolkning: ${gameState.population}`);
-	$("#acres").html(`Mark: ${gameState.acres}`);
-	$("#bushels").html(`Matkorgar: ${gameState.bushels}`);
-	$("#harvest").html(`Körde: ${gameState.harvest}`);
-	$("#rats").html(`Råttor: ${gameState.rats}`);
-	$("#price").html(`Pris: ${gameState.price}`);
+	$("#starved").html(`<p>Döda i svält:</p><p>${gameState.starved}</p>`);
+	$("#newcomers").html(`<p>Nykommande:</p><p>${gameState.newcomers}</p>`);
+	$("#population").html(`<p>Befolkning:</p><p>${gameState.population}</p>`);
+	$("#acres").html(`<p>Mark:</p><p>${gameState.acres}</p>`);
+	$("#bushels").html(`<p>Matkorgar:<p>${gameState.bushels}</p>`);
+	$("#harvest").html(`<p>Körde:</p><p>${gameState.harvest}</p>`);
+	$("#rats").html(`<p>Råttor:</p><p>${gameState.rats}</p>`);
+	$("#price").html(`<p>Pris:</p><p>${gameState.price}</p>`);
 
 	updateSliderValueOutput("sliderAcrestosellbuy", "outputAcrestosellbuy");
 	updateSliderValueOutput("sliderFeedpeople", "outputFeedpeople");
