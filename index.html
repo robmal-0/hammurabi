@@ -26,179 +26,226 @@
 				<p>Hjälp och regler</p>
 			</menu>
 			<div class="tab game" data-tab="Spela">
-				<div class="rapport">
-					<h2 id="year"></h2>
-					<div id="people" class="wrapper">
-						<div id="starved"></div>
-						<div id="newcomers"></div>
-						<div id="population"></div>
+				<div>
+					<div class="rapport">
+						<h2 id="year"></h2>
+						<div id="people" class="wrapper">
+							<div id="starved"></div>
+							<div id="newcomers"></div>
+							<div id="population"></div>
+						</div>
+						<div id="economy" class="wrapper">
+							<div id="acres"></div>
+							<div id="bushels"></div>
+							<div id="harvest"></div>
+							<div id="rats"></div>
+							<div id="price"></div>
+						</div>
 					</div>
-					<div id="economy" class="wrapper">
-						<div id="acres"></div>
-						<div id="bushels"></div>
-						<div id="harvest"></div>
-						<div id="rats"></div>
-						<div id="price"></div>
-					</div>
-				</div>
-				<form>
-					<fieldset>
-						<legend>
-							Mark att köpa/sälja:
-							<span id="outputAcrestosellbuy">164</span>
-						</legend>
-						<input
-							type="button"
-							value="-"
-							id="minusbuttonAcrestosellbuy"
-							onclick="onChangeAcres(
+					<form>
+						<fieldset>
+							<legend>
+								Mark att köpa/sälja:
+								<span id="outputAcrestosellbuy">164</span>
+							</legend>
+							<input
+								type="button"
+								value="-"
+								id="minusbuttonAcrestosellbuy"
+								onclick="onChangeAcres(
 								'minusbuttonAcrestosellbuy'
 							);"
-						/>
-						<input
-							type="range"
-							id="sliderAcrestosellbuy"
-							onchange="onChangeAcres(
+							/>
+							<input
+								type="range"
+								id="sliderAcrestosellbuy"
+								onchange="onChangeAcres(
 								'sliderAcrestosellbuy'
 							);"
-							min="-1000"
-							max="164"
-							step="1"
-						/>
-						<input
-							type="button"
-							value="+"
-							id="plusbuttonAcrestosellbuy"
-							onclick="onChangeAcres(
+								min="-1000"
+								max="164"
+								step="1"
+							/>
+							<input
+								type="button"
+								value="+"
+								id="plusbuttonAcrestosellbuy"
+								onclick="onChangeAcres(
 								'plusbuttonAcrestosellbuy'
 							);"
-						/>
-					</fieldset>
-					<fieldset>
-						<legend>Mata folk: <span id="outputFeedpeople">0</span></legend>
-						<input
-							type="button"
-							value="-"
-							id="minusbuttonFeedpeople"
-							onclick="onChangeFeeding(
+							/>
+						</fieldset>
+						<fieldset>
+							<legend>Mata folk: <span id="outputFeedpeople">0</span></legend>
+							<input
+								type="button"
+								value="-"
+								id="minusbuttonFeedpeople"
+								onclick="onChangeFeeding(
 								'minusbuttonFeedpeople'
 							);"
-						/>
-						<input
-							type="range"
-							id="sliderFeedpeople"
-							onchange="onChangeFeeding(
+							/>
+							<input
+								type="range"
+								id="sliderFeedpeople"
+								onchange="onChangeFeeding(
 								'sliderFeedpeople'
 							);"
-							min="0"
-							max="12"
-							step="1"
-						/>
-						<input
-							type="button"
-							value="+"
-							id="plusbuttonFeedpeople"
-							onclick="onChangeFeeding(
+								min="0"
+								max="12"
+								step="1"
+							/>
+							<input
+								type="button"
+								value="+"
+								id="plusbuttonFeedpeople"
+								onclick="onChangeFeeding(
 								'plusbuttonFeedpeople'
 							);"
-						/>
-					</fieldset>
-					<fieldset>
-						<legend>
-							Plantera frön:
-							<span id="outputPlantwithseed">0</span>
-						</legend>
-						<input
-							type="button"
-							value="-"
-							id="minusbuttonPlantwithseed"
-							onclick="onChangePlanting(
+							/>
+						</fieldset>
+						<fieldset>
+							<legend>
+								Plantera frön:
+								<span id="outputPlantwithseed">0</span>
+							</legend>
+							<input
+								type="button"
+								value="-"
+								id="minusbuttonPlantwithseed"
+								onclick="onChangePlanting(
 								'minusbuttonPlantwithseed'
 							);"
-						/>
-						<input
-							type="range"
-							id="sliderPlantwithseed"
-							onchange="onChangePlanting(
+							/>
+							<input
+								type="range"
+								id="sliderPlantwithseed"
+								onchange="onChangePlanting(
 								'sliderPlantwithseed'
 							);"
-							min="0"
-							max="12"
-							step="1"
-						/>
-						<input
-							type="button"
-							value="+"
-							id="plusbuttonPlantwithseed"
-							onclick="onChangePlanting(
+								min="0"
+								max="12"
+								step="1"
+							/>
+							<input
+								type="button"
+								value="+"
+								id="plusbuttonPlantwithseed"
+								onclick="onChangePlanting(
 								'plusbuttonPlantwithseed'
 							);"
-						/>
-					</fieldset>
-					<button type="button" onclick="gameStart();">Starta om</button>
-					<button type="button" onclick="finishTurn();">Klar!</button>
-				</form>
+							/>
+						</fieldset>
+
+						<button type="button" onclick="gameStart();">Starta om</button>
+						<button type="button" onclick="finishTurn();">Klar!</button>
+					</form>
+				</div>
+				<div class="rules">
+					<h2>Regler</h2>
+					<ul>
+						<li>Varje person kräver 20 skäppor per år för att överleva.</li>
+						<li>Att plantera kräver 1 skäppa / ytenhet mark.</li>
+						<li>Du vinner om du överlever 10 år.</li>
+						<li>Varje person kan som mest skörda 10 markytor.</li>
+						<li>
+							Priset för land varierar med åren och visas högst upp bland
+							statistiken
+						</li>
+						<li>Om du inte sköter dig kommer du bli avsatt!</li>
+					</ul>
+					<h2>Grundläggande strategi</h2>
+					<ul>
+						<li>
+							Se till att du matar alla personer 20 skäppor per år per person.
+						</li>
+						<li>
+							Försök planera från på all mark, d.v.s. om du har frön och
+							personer för att göra det.
+						</li>
+						<li>Om du har kvar frön, spändera detta på att köpa mer land.</li>
+						<li>
+							Har dun inte nog med frön för att mata alla och plantera mer,
+							sälj lite land.
+						</li>
+					</ul>
+					<h2>Andra tips</h2>
+					<ul>
+						<li>
+							Du kan trycka på siffran för en uppgift för att redigera den
+							lättare. Här kan du även skriva enkel matematik som +, -, * och
+							/.
+						</li>
+						<li>Dubbelklickar du på slidern sätt den automatiskt till 0.</li>
+					</ul>
+				</div>
 			</div>
 			<div class="tab" data-tab="Hjälp och regler">
-				<h2>Bakgrund</h2>
-				<p>
-					Du är Hammurabi, kung över Babylon och du måste se till att ditt rike
-					överlever!
-				</p>
-				<p>
-					Spelet är baserat på världens första textbaserade strategispel.
-					Spelet hette <i>The Sumer Game</i> och skapades av William McKay och
-					designades av Mabel Addis.
-				</p>
-				<h2>Hur man spelar</h2>
-				<p>
-					Du kan dra i sliders, trycka på +/- knapparna eller tryck på siffran
-					och redigera för att ändra hur mycket av vardera uppgift du ska göra
-					under detta år. När du är nöjd kan du klicka på knappen "Klar!" så
-					hoppar spelet fram ett år och statestiken för det gångna året visas i
-					menyerna högst upp.
-				</p>
-				<p>
-					De tre uppgifterna du kan göra är att köpa/sälja mark, ge mat åt
-					befolkningen och plantera frön. Att mata befolkningen samt att
-					plantera frön konsumerar "skäppor".
-				</p>
-				<h2>Regler</h2>
-				<ul>
-					<li>Varje person kräver 20 skäppor per år för att överleva.</li>
-					<li>Att plantera kräver 1 skäppa / ytenhet mark.</li>
-					<li>Du vinner om du överlever 10 år.</li>
-					<li>Varje person kan som mest skörda 10 markytor.</li>
-					<li>
-						Priset för land varierar med åren och visas högst upp bland
-						statistiken
-					</li>
-					<li>Om du inte sköter dig kommer du bli avsatt!</li>
-				</ul>
-				<h2>Grundläggande strategi</h2>
-				<ul>
-					<li>
-						Se till att du matar alla personer 20 skäppor per år per person.
-					</li>
-					<li>
-						Försök planera från på all mark, d.v.s. om du har frön och personer
-						för att göra det.
-					</li>
-					<li>Om du har kvar frön, spändera detta på att köpa mer land.</li>
-					<li>
-						Har dun inte nog med frön för att mata alla och plantera mer, sälj
-						lite land.
-					</li>
-				</ul>
-				<h2>Andra tips</h2>
-				<ul>
-					<li>
-						Du kan trycka på siffran för en uppgift för att redigera den
-						lättare. Här kan du även skriva enkel matematik som +, -, * och /.
-					</li>
-					<li>Dubbelklickar du på slidern sätt den automatiskt till 0.</li>
-				</ul>
+				<div>
+					<h2>Bakgrund</h2>
+					<p>
+						Du är Hammurabi, kung över Babylon och du måste se till att ditt
+						rike överlever!
+					</p>
+					<p>
+						Spelet är baserat på världens första textbaserade strategispel.
+						Spelet hette <i>The Sumer Game</i> och skapades av William McKay
+						och designades av Mabel Addis.
+					</p>
+					<h2>Hur man spelar</h2>
+					<p>
+						Du kan dra i sliders, trycka på +/- knapparna eller tryck på
+						siffran och redigera för att ändra hur mycket av vardera uppgift du
+						ska göra under detta år. När du är nöjd kan du klicka på knappen
+						"Klar!" så hoppar spelet fram ett år och statestiken för det gångna
+						året visas i menyerna högst upp.
+					</p>
+					<p>
+						De tre uppgifterna du kan göra är att köpa/sälja mark, ge mat åt
+						befolkningen och plantera frön. Att mata befolkningen samt att
+						plantera frön konsumerar "skäppor".
+					</p>
+				</div>
+				<div class="rules">
+					<h2>Regler</h2>
+					<ul>
+						<li>Varje person kräver 20 skäppor per år för att överleva.</li>
+						<li>Att plantera kräver 1 skäppa / ytenhet mark.</li>
+						<li>Du vinner om du överlever 10 år.</li>
+						<li>Varje person kan som mest skörda 10 markytor.</li>
+						<li>
+							Priset för land varierar med åren och visas högst upp bland
+							statistiken
+						</li>
+						<li>Om du inte sköter dig kommer du bli avsatt!</li>
+					</ul>
+					<h2>Grundläggande strategi</h2>
+					<ul>
+						<li>
+							Se till att du matar alla personer 20 skäppor per år per person.
+						</li>
+						<li>
+							Försök planera från på all mark, d.v.s. om du har frön och
+							personer för att göra det.
+						</li>
+						<li>Om du har kvar frön, spändera detta på att köpa mer land.</li>
+						<li>
+							Har dun inte nog med frön för att mata alla och plantera mer,
+							sälj lite land.
+						</li>
+					</ul>
+					<h2>Andra tips</h2>
+					<ul>
+						<li>
+							Du kan trycka på siffran för en uppgift för att redigera den
+							lättare. Här kan du även skriva enkel matematik som +, -, * och
+							/.
+						</li>
+						<li>Dubbelklickar du på slidern sätt den automatiskt till 0.</li>
+					</ul>
+				</div>
 			</div>
+
 			<footer>
 				<p>Gjord av: Robin Malmström</p>
 				<p>Email: robmal-0@student.ltu.se</p>

@@ -14,7 +14,7 @@ body {
 	grid-template-rows: 90px auto 35px;
 	grid-template-areas:
 		"header header"
-		"menu ."
+		"menu   content"
 		"footer footer";
 	height: 100%;
 }
@@ -65,11 +65,25 @@ menu p:hover {
 /* #region Sidinnehåll */
 
 .tab {
+	grid-area: content;
 	display: none;
+	grid-template-columns: auto 500px;
+	grid-template-areas: ". rules";
 	padding: 10px;
 	overflow: auto;
 	filter: brightness(0.9);
 	background: #fdfffa80;
+}
+
+.rules {
+	grid-area: rules;
+	background: lightyellow;
+	overflow: auto;
+	padding: 10px;
+	font-size: 21px;
+	border: 1px solid goldenrod;
+	box-sizing: border-box;
+	border-radius: 5px;
 }
 
 h2 {
@@ -137,6 +151,19 @@ input[type="range"] {
 	grid-area: econ;
 }
 
+button {
+	background: transparent;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 10px 15px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+button:hover {
+	box-shadow: inset 0 0 10px 0 #00ff0050;
+}
+
 /* #endregion */
 
 /* #region Footer */
@@ -153,6 +180,19 @@ footer {
 footer p {
 	margin: 0;
 	padding-left: 10px;
+}
+
+/* #endregion */
+
+/* #region Media Queries */
+
+@media (max-width: 1530px) {
+	.tab {
+		grid-template-columns: auto;
+		grid-template-areas:
+			"."
+			"rules";
+	}
 }
 
 /* #endregion */

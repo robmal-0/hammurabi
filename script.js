@@ -15,10 +15,10 @@ function writeGameState() {
 }
 
 $(() => {
-	$("div.tab").first().css("display", "initial");
+	$("div.tab").first().css("display", "grid");
 	$("menu p").on("click", function () {
 		$("div.tab").css("display", "");
-		$(`div.tab[data-tab="${$(this).text()}"]`).css("display", "initial");
+		$(`div.tab[data-tab="${$(this).text()}"]`).css("display", "grid");
 	});
 	$("input[type='range']").on("dblclick", function () {
 		this.value = 0;
