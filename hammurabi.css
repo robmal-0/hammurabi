@@ -11,7 +11,7 @@ body {
 .grid {
 	display: grid;
 	grid-template-columns: 300px auto;
-	grid-template-rows: 90px auto 35px;
+	grid-template-rows: 90px auto 23px;
 	grid-template-areas:
 		"header header"
 		"menu   content"
@@ -175,6 +175,7 @@ footer {
 	background: lightslategray;
 	display: grid;
 	grid-template-columns: auto auto;
+	font-size: 20px;
 }
 
 footer p {
@@ -186,12 +187,34 @@ footer p {
 
 /* #region Media Queries */
 
-@media (max-width: 1530px) {
+@media screen and (max-width: 1530px) {
 	.tab {
 		grid-template-columns: auto;
 		grid-template-areas:
 			"."
 			"rules";
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.rapport {
+		grid-template-columns: auto;
+		grid-template-areas:
+			"head"
+			"peop"
+			"econ";
+	}
+
+	.rules {
+		min-height: 300px;
+		margin-bottom: 20px;
+	}
+
+	.wrapper div {
+		grid-template-columns: 260px 100px;
+	}
+	input[type="range"] {
+		width: 400px;
 	}
 }
 
