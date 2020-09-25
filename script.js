@@ -5,7 +5,7 @@ function writeGameState() {
 	$("#population").html(`<p>Befolkning:</p><p>${gameState.population}</p>`);
 	$("#acres").html(`<p>Mark:</p><p>${gameState.acres}</p>`);
 	$("#bushels").html(`<p>Skäppor:<p>${gameState.bushels}</p>`);
-	$("#harvest").html(`<p>Körde:</p><p>${gameState.harvest}</p>`);
+	$("#harvest").html(`<p>Skörd:</p><p>${gameState.harvest}</p>`);
 	$("#rats").html(`<p>Råttor:</p><p>${gameState.rats}</p>`);
 	$("#price").html(`<p>Pris:</p><p>${gameState.price}</p>`);
 
